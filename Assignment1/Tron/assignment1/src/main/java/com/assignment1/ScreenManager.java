@@ -1,3 +1,5 @@
+package com.assignment1;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;

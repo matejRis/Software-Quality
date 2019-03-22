@@ -1,3 +1,6 @@
+package com.assignment1;
+
+import com.assignment1.ScreenManager;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
