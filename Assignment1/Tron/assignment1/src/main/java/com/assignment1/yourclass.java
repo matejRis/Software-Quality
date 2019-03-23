@@ -33,8 +33,8 @@ public class yourclass extends Core implements KeyListener, MouseListener,
 	}
         
         private void CreatePlayers() {
-            Player player1 = new Player(40, 40, Direction.RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, Color.GREEN);
-            Player player2 = new Player(600, 440, Direction.LEFT, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_A, KeyEvent.VK_D, Color.RED);
+            Player player1 = new Player(40, 40, Direction.RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, Color.GREEN, true);
+            Player player2 = new Player(600, 440, Direction.LEFT, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_A, KeyEvent.VK_D, Color.RED, false);
             
             players.add(player1);
             players.add(player2);
@@ -118,11 +118,11 @@ public class yourclass extends Core implements KeyListener, MouseListener,
 
 	public void keyPressed(KeyEvent keyEvent) {
             for (Player player : players) {
-                ChangeDirection(keyEvent, player);
+                ChangePlayerDirection(keyEvent, player);
             }
 	}
 
-        private void ChangeDirection(KeyEvent keyEvent, Player player) {
+        private void ChangePlayerDirection(KeyEvent keyEvent, Player player) {
             Direction playerDirection = player.getCurrentDirection();
             
             if (keyEvent.getKeyCode() == player.getKeyUp()) {
@@ -144,34 +144,90 @@ public class yourclass extends Core implements KeyListener, MouseListener,
             }
         }
         
+        private void ChangePlayerDirection(MouseEvent mouseEvent, Player player) {
+            if (player.isControlableByMouse()) {
+                if (mouseEvent.getButton() == MouseEvent.BUTTON1) {
+                    MoveLeft(player);
+                } else if (mouseEvent.getButton() == MouseEvent.BUTTON3) {
+                    MoveRight(player);
+                }
+            }
+        }
+        
+        private void MoveLeft(Player player) {
+            switch(player.getCurrentDirection()){
+		case UP:
+                        player.setCurrentDirection(Direction.LEFT);
+			break;
+		case RIGHT:
+			player.setCurrentDirection(Direction.UP);
+			break;
+		case DOWN:
+                        player.setCurrentDirection(Direction.RIGHT);
+			break;
+		case LEFT:
+			player.setCurrentDirection(Direction.DOWN);
+			break;
+		}
+        }
+
+        private void MoveRight(Player player) {
+            switch(player.getCurrentDirection()){
+		case UP:
+                        player.setCurrentDirection(Direction.RIGHT);
+			break;
+		case RIGHT:
+			player.setCurrentDirection(Direction.DOWN);
+			break;
+		case DOWN:
+                        player.setCurrentDirection(Direction.LEFT);
+			break;
+		case LEFT:
+			player.setCurrentDirection(Direction.UP);
+			break;
+		}
+        }
+        
+       @Override
 	public void keyReleased(KeyEvent e) {
 
 	}
 
+       @Override
 	public void keyTyped(KeyEvent arg0) {
 
 	}
 
+       @Override
 	public void mouseClicked(MouseEvent e) {
 
 	}
 
+       @Override
 	public void mouseEntered(MouseEvent arg0) {
 	}
 
+       @Override
 	public void mouseExited(MouseEvent arg0) {
 	}
 
-	public void mousePressed(MouseEvent e) {
+       @Override
+	public void mousePressed(MouseEvent mouseEvent) {
+            for (Player player : players) {
+                ChangePlayerDirection(mouseEvent, player);
+            }
 	}
 
+       @Override
 	public void mouseReleased(MouseEvent e) {
 	}
 
+       @Override
 	public void mouseDragged(MouseEvent e) {
 
 	}
 
+       @Override
 	public void mouseMoved(MouseEvent e) {
 
 	}

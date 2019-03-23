@@ -27,10 +27,11 @@ public class Player {
     private int keyDown;
     private int keyLeft;
     private int keyRight;
+    private boolean controlableByMouse;
     
     private static final int BASIC_MOVE_AMOUNT = 5;
 
-    private Player(int centreX, int centreY, int moveAmount, Direction startingDirection, int keyUp, int keyDown, int keyLeft, int keyRight, Color color) {
+    private Player(int centreX, int centreY, int moveAmount, Direction startingDirection, int keyUp, int keyDown, int keyLeft, int keyRight, Color color, boolean controlableByMouse) {
         this.centreX = centreX;
         this.centreY = centreY;
         this.currentDirection = startingDirection;
@@ -42,10 +43,11 @@ public class Player {
         this.color = color;
         this.pathX = new ArrayList<>();
         this.pathY = new ArrayList<>();
+        this.controlableByMouse = controlableByMouse;
     }
-    
-    public Player(int centreX, int centreY, Direction startingDirection, int keyUp, int keyDown, int keyLeft, int keyRight, Color color) {
-        this(centreX, centreY, BASIC_MOVE_AMOUNT, startingDirection, keyUp, keyDown, keyLeft, keyRight, color);
+ 
+    public Player(int centreX, int centreY, Direction startingDirection, int keyUp, int keyDown, int keyLeft, int keyRight, Color color, boolean controlableByMouse) {
+        this(centreX, centreY, BASIC_MOVE_AMOUNT, startingDirection, keyUp, keyDown, keyLeft, keyRight, color, controlableByMouse);
     }
 
     public boolean isInCollisionWithOther(Player other) {
@@ -57,6 +59,14 @@ public class Player {
        return false;
     }
 
+    public boolean isControlableByMouse() {
+        return controlableByMouse;
+    }
+
+    public void setControlableByMouse(boolean controlableByMouse) {
+        this.controlableByMouse = controlableByMouse;
+    }
+    
     public Color getColor() {
         return color;
     }
