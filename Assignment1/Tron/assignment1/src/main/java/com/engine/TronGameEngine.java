@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class TronGameEngine extends GameEngine {
@@ -22,8 +24,10 @@ public class TronGameEngine extends GameEngine {
     }
 
     public void init() {
-
         screenManager = new ScreenManager();
+        List<DisplayMode> displayModes = Arrays.asList(screenManager.getCompatibleDisplayModes());
+        Collections.reverse(displayModes);
+        DisplayMode[] modes = (DisplayMode[]) displayModes.toArray();
         DisplayMode displayMode = screenManager.findFirstCompatibaleMode(modes);
         screenManager.setFullScreen(displayMode);
         Window window = screenManager.getFullScreenWindow();
