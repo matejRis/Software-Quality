@@ -8,24 +8,24 @@ import java.awt.Graphics2D;
 import java.util.List;
 
 public class Presentation {
-    
-    public void draw(ScreenManager screenManager, List<Player> players, Color screenColor) {
-        Graphics2D graphics = screenManager.getGraphics();
-        graphics.setColor(screenColor);
-        graphics.fillRect(0, 0, screenManager.getWidth(), screenManager.getHeight());
 
-        for (Player player : players) {
-            drawPlayerPaths(player, graphics);
-        }
+	public void draw(ScreenManager screenManager, List<Player> players, Color screenColor) {
+		Graphics2D graphics = screenManager.getGraphics();
+		graphics.setColor(screenColor);
+		graphics.fillRect(0, 0, screenManager.getWidth(), screenManager.getHeight());
 
-        graphics.dispose();
-        screenManager.update();
-    }
+		for (Player player : players) {
+			drawPlayerPaths(player, graphics);
+		}
 
-    private void drawPlayerPaths(Player player, Graphics2D graphics) {
-        for (Coordinates coords : player.getPath()) {
-            graphics.setColor(player.getColor());
-            graphics.fillRect(coords.getX(), coords.getY(), 10, 10);
-        }
-    }
+		graphics.dispose();
+		screenManager.update();
+	}
+
+	private void drawPlayerPaths(Player player, Graphics2D graphics) {
+		for (Coordinates coordinates : player.getPath()) {
+			graphics.setColor(player.getColor());
+			graphics.fillRect(coordinates.getX(), coordinates.getY(), 10, 10);
+		}
+	}
 }

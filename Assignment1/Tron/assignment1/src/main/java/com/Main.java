@@ -27,6 +27,11 @@ public class Main {
         Player player2 = new Player(new Coordinates(600, 440), Direction.LEFT, Color.RED);
         player2.assignControls(new MouseControls(MouseEvent.BUTTON1, MouseEvent.BUTTON3, player2));    
         players.add(player2);
+
+        //Addition of new player
+        //Player player3 = new Player(new Coordinates(1200, 840), Direction.DOWN, Color.BLUE);
+        //player3.assignControls(new KeyboardControls(KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, player3));
+        //players.add(player3);
         
         Presentation presentation = new Presentation();
         ScreenManager screenManager = new ScreenManager();
