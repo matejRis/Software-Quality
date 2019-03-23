@@ -51,10 +51,6 @@ public abstract class GameEngine implements MouseListener, MouseMotionListener, 
             long timePassed = System.currentTimeMillis() - cumTime;
             cumTime += timePassed;
             update(timePassed);
-            Graphics2D g = screenManager.getGraphics();
-            draw(g);
-            g.dispose();
-            screenManager.update();
 
             try {
                 Thread.sleep(20);
@@ -65,8 +61,6 @@ public abstract class GameEngine implements MouseListener, MouseMotionListener, 
 
 
     public abstract void update(long timePassed);
-
-    public abstract void draw(Graphics2D g);
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {

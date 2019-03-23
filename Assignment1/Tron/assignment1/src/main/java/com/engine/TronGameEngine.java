@@ -38,11 +38,7 @@ public class TronGameEngine extends GameEngine {
 
     @Override
     public void update(long timePassed) {
-
-    }
-
-    public void draw(Graphics2D graphics) {
-        setScreenColor(graphics);
+        presentation.draw(screenManager, players, SCREEN_COLOR);
 
         for (Player player : players) {
             movePlayerInCurrentDirection(player);
@@ -53,7 +49,6 @@ public class TronGameEngine extends GameEngine {
             }
 
             addCurrentPositionToPaths(player);
-            drawPlayerPaths(player, graphics);
         }
     }
 
@@ -78,18 +73,6 @@ public class TronGameEngine extends GameEngine {
         }
 
         return false;
-    }
-
-    private void drawPlayerPaths(Player player, Graphics2D graphics) {
-        for (int x = 0; x < player.getPathX().size(); x++) {
-            graphics.setColor(player.getColor());
-            graphics.fillRect(player.getPathX().get(x), player.getPathY().get(x), 10, 10);
-        }
-    }
-
-    private void setScreenColor(Graphics2D graphics) {
-        graphics.setColor(SCREEN_COLOR);
-        graphics.fillRect(0, 0, screenManager.getWidth(), screenManager.getHeight());
     }
 
     private void addCurrentPositionToPaths(Player player) {
