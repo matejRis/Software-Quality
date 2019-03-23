@@ -1,23 +1,19 @@
-package com.assignmentOne;
+package com.engine;
+
+import com.enums.Direction;
+import com.entities.Player;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Window;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
-public class Main extends Core implements KeyListener, MouseListener, MouseMotionListener {
+public class TronGameEngine extends AbstractGameEngine {
     private final ArrayList<Player> players = new ArrayList<>();
 
     private static final Color SCREEN_COLOR = Color.BLACK;
-
-    public static void main(String[] args) {
-        new Main().run();
-    }
 
     public void init() {
         super.init();
@@ -28,6 +24,11 @@ public class Main extends Core implements KeyListener, MouseListener, MouseMotio
         window.addMouseMotionListener(this);
     }
 
+    @Override
+    public void update(long timePassed) {
+
+    }
+
     public void draw(Graphics2D graphics) {
         setScreenColor(graphics);
 
@@ -35,7 +36,8 @@ public class Main extends Core implements KeyListener, MouseListener, MouseMotio
             movePlayerInCurrentDirection(player);
 
             if (isPlayerInCollision(player)) {
-                System.exit(0);
+                //System.exit(0);
+                stop();
             }
 
             addCurrentPositionToPaths(player);
@@ -50,42 +52,10 @@ public class Main extends Core implements KeyListener, MouseListener, MouseMotio
     }
 
     @Override
-    public void keyReleased(KeyEvent keyEvent) {
-    }
-
-    @Override
-    public void keyTyped(KeyEvent keyEvent) {
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent mouseEvent) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent mouseEvent) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent mouseEvent) {
-    }
-
-    @Override
     public void mousePressed(MouseEvent mouseEvent) {
         for (Player player : players) {
             changePlayerDirection(mouseEvent, player);
         }
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent mouseEvent) {
-    }
-
-    @Override
-    public void mouseDragged(MouseEvent mouseEvent) {
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent mouseEvent) {
     }
 
     private void createPlayers() {
@@ -185,14 +155,14 @@ public class Main extends Core implements KeyListener, MouseListener, MouseMotio
     private void changePlayerDirection(MouseEvent mouseEvent, Player player) {
         if (player.isControllableByMouse()) {
             if (mouseEvent.getButton() == MouseEvent.BUTTON1) {
-                MoveLeft(player);
+                moveLeft(player);
             } else if (mouseEvent.getButton() == MouseEvent.BUTTON3) {
-                MoveRight(player);
+                moveRight(player);
             }
         }
     }
 
-    private void MoveLeft(Player player) {
+    private void moveLeft(Player player) {
         switch (player.getCurrentDirection()) {
             case UP:
                 player.setCurrentDirection(Direction.LEFT);
@@ -209,7 +179,7 @@ public class Main extends Core implements KeyListener, MouseListener, MouseMotio
         }
     }
 
-    private void MoveRight(Player player) {
+    private void moveRight(Player player) {
         switch (player.getCurrentDirection()) {
             case UP:
                 player.setCurrentDirection(Direction.RIGHT);

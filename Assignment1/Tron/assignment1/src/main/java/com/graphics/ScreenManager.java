@@ -1,4 +1,4 @@
-package com.assignmentOne;
+package com.graphics;
 
 import javax.swing.JFrame;
 import java.awt.DisplayMode;
@@ -129,5 +129,4 @@ public class ScreenManager {
 		}
 
 	}
-
 }

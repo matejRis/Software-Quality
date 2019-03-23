@@ -1,4 +1,4 @@
-package com.assignmentOne;
+package com.graphics;
 
 import java.awt.Image;
 import java.util.ArrayList;

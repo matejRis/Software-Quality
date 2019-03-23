@@ -1,4 +1,6 @@
-package com.assignmentOne;
+package com.entities;
+
+import com.enums.Direction;
 
 import java.awt.Color;
 import java.util.ArrayList;

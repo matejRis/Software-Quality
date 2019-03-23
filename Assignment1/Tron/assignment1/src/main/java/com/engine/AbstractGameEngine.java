@@ -1,4 +1,6 @@
-package com.assignmentOne;
+package com.engine;
+
+import com.graphics.ScreenManager;
 
 import java.awt.Color;
 import java.awt.DisplayMode;
@@ -6,9 +8,14 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Window;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
-public abstract class Core {
+public abstract class AbstractGameEngine implements GameEngine, MouseListener, MouseMotionListener, KeyListener {
 
     private boolean running;
     protected ScreenManager screenManager;
@@ -69,8 +76,45 @@ public abstract class Core {
         }
     }
 
-    public void update(long timePassed) {
+    public abstract void draw(Graphics2D g);
+
+    @Override
+    public void keyPressed(KeyEvent keyEvent) {
     }
 
-    public abstract void draw(Graphics2D g);
+    @Override
+    public void keyReleased(KeyEvent keyEvent) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent keyEvent) {
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mousePressed(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent mouseEvent) {
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent mouseEvent) {
+    }
 }
