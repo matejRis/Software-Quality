@@ -1,4 +1,4 @@
-package com.assignment1;
+package com.assignmentOne;
 
 import java.awt.Image;
 import java.util.ArrayList;
