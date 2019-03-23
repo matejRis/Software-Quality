@@ -1,12 +1,14 @@
 package com.graphics;
 
-import com.entities.Player;
+import com.model.Coordinates;
+import com.model.Player;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.List;
 
 public class Presentation {
+    
     public void draw(ScreenManager screenManager, List<Player> players, Color screenColor) {
         Graphics2D graphics = screenManager.getGraphics();
         graphics.setColor(screenColor);
@@ -21,9 +23,9 @@ public class Presentation {
     }
 
     private void drawPlayerPaths(Player player, Graphics2D graphics) {
-        for (int x = 0; x < player.getPathX().size(); x++) {
+        for (Coordinates coords : player.getPath()) {
             graphics.setColor(player.getColor());
-            graphics.fillRect(player.getPathX().get(x), player.getPathY().get(x), 10, 10);
+            graphics.fillRect(coords.getX(), coords.getY(), 10, 10);
         }
     }
 }

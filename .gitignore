@@ -1,7 +1,0 @@
-# file: ~/.gitignore
-
-*.iml
-*.iws
-*.ipr
-.idea/
-target
