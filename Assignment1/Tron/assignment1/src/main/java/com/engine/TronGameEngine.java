@@ -1,24 +1,36 @@
 package com.engine;
 
-import com.enums.Direction;
 import com.entities.Player;
+import com.enums.Direction;
+import com.graphics.Presentation;
+import com.graphics.ScreenManager;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Window;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
+import java.awt.image.BufferedImage;
+import java.util.List;
 
-public class TronGameEngine extends AbstractGameEngine {
-    private final ArrayList<Player> players = new ArrayList<>();
+public class TronGameEngine extends GameEngine {
+    private final List<Player> players;
 
     private static final Color SCREEN_COLOR = Color.BLACK;
 
+    public TronGameEngine(Presentation presentation, ScreenManager screenManager, List<Player> players) {
+        super(presentation, screenManager);
+        this.players = players;
+    }
+
     public void init() {
-        super.init();
-        createPlayers();
+
+        screenManager = new ScreenManager();
+        DisplayMode displayMode = screenManager.findFirstCompatibaleMode(modes);
+        screenManager.setFullScreen(displayMode);
         Window window = screenManager.getFullScreenWindow();
+        window.setFont(new Font("Arial", Font.PLAIN, 20));
+        window.setBackground(Color.WHITE);
+        window.setForeground(Color.RED);
+        window.setCursor(window.getToolkit().createCustomCursor(new BufferedImage(3, 3, BufferedImage.TYPE_INT_ARGB), new Point(0, 0), "null"));
         window.addKeyListener(this);
         window.addMouseListener(this);
         window.addMouseMotionListener(this);
@@ -56,14 +68,6 @@ public class TronGameEngine extends AbstractGameEngine {
         for (Player player : players) {
             changePlayerDirection(mouseEvent, player);
         }
-    }
-
-    private void createPlayers() {
-        Player player1 = new Player(40, 40, Direction.RIGHT, KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, Color.GREEN, true);
-        Player player2 = new Player(600, 440, Direction.LEFT, KeyEvent.VK_W, KeyEvent.VK_S, KeyEvent.VK_A, KeyEvent.VK_D, Color.RED, false);
-
-        players.add(player1);
-        players.add(player2);
     }
 
     private boolean isPlayerInCollision(Player player) {
