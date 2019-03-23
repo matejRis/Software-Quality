@@ -35,6 +35,7 @@ public class TronGameEngine extends GameEngine {
         List<DisplayMode> modes = Arrays.asList(screenManager.getCompatibleDisplayModes());
         Collections.reverse(modes);
         DisplayMode displayMode = screenManager.findFirstCompatibaleMode((DisplayMode[])modes.toArray());
+        
         screenManager.setFullScreen(displayMode);
         Window window = screenManager.getFullScreenWindow();
         window.setFont(new Font("Arial", Font.PLAIN, 20));
