@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7562b1f5-eaee-4b30-8a9d-9e0eef5e0e30" name="Default Changelist" comment="" />
+    <list default="true" id="7562b1f5-eaee-4b30-8a9d-9e0eef5e0e30" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/ControllerTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,33 +14,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-78">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="49">
               <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,8 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="304">
+              <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Input.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -78,11 +74,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/ControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Logger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -95,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="119">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
@@ -136,8 +141,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="767" />
-    <option name="y" value="686" />
+    <option name="x" value="766" />
+    <option name="y" value="685" />
     <option name="width" value="385" />
     <option name="height" value="345" />
   </component>
@@ -149,6 +154,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,7 +213,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ControllerTest.testSelectedProductsToOutput">
+  <component name="RunManager" selected="JUnit.ControllerTest.testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput">
     <configuration name="AtLeastNOfFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProductFilter" />
       <extension name="coverage">
@@ -259,7 +264,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtLeastNOfFilterTest.testConstructorThrowsFilterNeverSucceeds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProductFilter" />
       <extension name="coverage">
         <pattern>
@@ -268,14 +273,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cz.muni.fi.pv260.productfilter" />
-      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv260.productfilter.AtLeastNOfFilterTest" />
-      <option name="METHOD_NAME" value="testConstructorThrowsFilterNeverSucceeds" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv260.productfilter.ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductFilter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv260.productfilter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv260.productfilter" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv260.productfilter.ControllerTest" />
+      <option name="METHOD_NAME" value="testExceptionOccursWhenObtainingProductData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtLeastNOfFilterTest.testFilterFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProductFilter" />
       <extension name="coverage">
         <pattern>
@@ -284,8 +304,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cz.muni.fi.pv260.productfilter" />
-      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv260.productfilter.AtLeastNOfFilterTest" />
-      <option name="METHOD_NAME" value="testFilterFails" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv260.productfilter.ControllerTest" />
+      <option name="METHOD_NAME" value="testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -309,10 +329,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControllerTest.testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput" />
+        <item itemvalue="JUnit.ControllerTest.testExceptionOccursWhenObtainingProductData" />
+        <item itemvalue="JUnit.ControllerTest" />
         <item itemvalue="JUnit.ControllerTest.testSelectedProductsToOutput" />
         <item itemvalue="JUnit.AtLeastNOfFilterTest" />
-        <item itemvalue="JUnit.AtLeastNOfFilterTest.testFilterFails" />
-        <item itemvalue="JUnit.AtLeastNOfFilterTest.testConstructorThrowsFilterNeverSucceeds" />
       </list>
     </recent_temporary>
   </component>
@@ -327,76 +348,78 @@
       <option name="presentableId" value="Default" />
       <updated>1556033695894</updated>
       <workItem from="1556033698716" duration="6912000" />
+      <workItem from="1556050563122" duration="2356000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AtLeastNOfFilterTest - 2019.04.23 at 18h 42m 19s.xml">
-      <configuration name="AtLeastNOfFilterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AtLeastNOfFilterTest - 2019.04.23 at 18h 44m 22s.xml">
-      <configuration name="AtLeastNOfFilterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AtLeastNOfFilterTest - 2019.04.23 at 18h 52m 21s.xml">
-      <configuration name="AtLeastNOfFilterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AtLeastNOfFilterTest_testFilterFails - 2019.04.23 at 18h 53m 46s.xml">
-      <configuration name="AtLeastNOfFilterTest.testFilterFails" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AtLeastNOfFilterTest - 2019.04.23 at 18h 54m 50s.xml">
-      <configuration name="AtLeastNOfFilterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest_testSelectedProductsToOutput - 2019.04.23 at 19h 36m 44s.xml">
-      <configuration name="ControllerTest.testSelectedProductsToOutput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest_testSelectedProductsToOutput - 2019.04.23 at 19h 38m 51s.xml">
-      <configuration name="ControllerTest.testSelectedProductsToOutput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest_testSelectedProductsToOutput - 2019.04.23 at 19h 57m 20s.xml">
-      <configuration name="ControllerTest.testSelectedProductsToOutput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest_testSelectedProductsToOutput - 2019.04.23 at 19h 59m 41s.xml">
-      <configuration name="ControllerTest.testSelectedProductsToOutput" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ControllerTest_testSelectedProductsToOutput - 2019.04.23 at 20h 00m 28s.xml">
       <configuration name="ControllerTest.testSelectedProductsToOutput" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ControllerTest - 2019.04.23 at 22h 24m 30s.xml">
+      <configuration name="ControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest - 2019.04.23 at 22h 31m 23s.xml">
+      <configuration name="ControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductData - 2019.04.23 at 22h 38m 31s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductData - 2019.04.23 at 22h 38m 40s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductData - 2019.04.23 at 22h 38m 44s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductData - 2019.04.23 at 22h 41m 58s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductData - 2019.04.23 at 22h 42m 01s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput - 2019.04.23 at 22h 49m 40s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput - 2019.04.23 at 22h 52m 42s.xml">
+      <configuration name="ControllerTest.testExceptionOccursWhenObtainingProductDataAndNothingIsInOutput" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6912000" />
+    <option name="totallyTimeSpent" value="9268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32960895" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +438,69 @@
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>String.format(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue());
+argumentString.getValue();
+String.format(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String.format(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue());
+argumentString.getValue();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String.format(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Controller.class.getSimpleName().equals(argumentTag.getValue())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.out.print(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class);
+argumentString.getValue();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>System.out.print(&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Controller.class.getSimpleName().equals(argumentTag.getValue()) &amp;&amp;
+                (&quot;Filter procedure failed with exception: &quot; + ObtainFailedException.class).equals(argumentString.getValue())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>argumentString.getValue()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>logSuccess(allProducts, selectedProducts)</expression-string>
         <language-id>JAVA</language-id>
@@ -429,81 +514,11 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/AtLeastNofFilterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AtLeastNofFilterTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/PriceLessThanFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Color.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/ColorFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
@@ -514,10 +529,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/ColorFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Color.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/AtLeastNOfFilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv260/productfilter/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv260/productfilter/ControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
