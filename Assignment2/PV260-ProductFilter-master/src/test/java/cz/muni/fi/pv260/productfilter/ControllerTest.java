@@ -40,7 +40,8 @@ public class ControllerTest {
         ArgumentCaptor<Collection> argument = ArgumentCaptor.forClass((Collection.class));
         controller.select(filter);
         verify(output).postSelectedProducts(argument.capture());
-        assertEquals(Arrays.asList(productBlack), argument.getValue());
+        assertEquals("Argument should contain only one black product.",
+                Arrays.asList(productBlack), argument.getValue());
     }
 
     @Test
@@ -50,7 +51,8 @@ public class ControllerTest {
         ArgumentCaptor<String> argumentString = ArgumentCaptor.forClass((String.class));
         controller.select(filter);
         verify(logger).log(argumentTag.capture(), argumentString.capture());
-        assertTrue(Controller.class.getSimpleName().equals(argumentTag.getValue()) &&
+        assertTrue("Logged message should be equal.",
+                Controller.class.getSimpleName().equals(argumentTag.getValue()) &&
                 "Successfully selected 1 out of 2 available products.".equals(argumentString.getValue()));
     }
 
@@ -61,7 +63,8 @@ public class ControllerTest {
         ArgumentCaptor<String> argumentString = ArgumentCaptor.forClass((String.class));
         controller.select(filter);
         verify(logger).log(argumentTag.capture(), argumentString.capture());
-        assertTrue(Controller.class.getSimpleName().equals(argumentTag.getValue()) &&
+        assertTrue("Logged message should be equal.",
+                Controller.class.getSimpleName().equals(argumentTag.getValue()) &&
                 ("Filter procedure failed with exception: " + ObtainFailedException.class.getName()).equals(argumentString.getValue()));
     }
 

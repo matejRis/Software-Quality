@@ -35,13 +35,15 @@ public class AtLeastNOfFilterTest<T> {
     public void testFilterPasses() {
         AtLeastNOfFilter<T> atLeastNOfFilter = new AtLeastNOfFilter<>(1, filter);
         when(filter.passes(item)).thenReturn(true);
-        assertTrue(atLeastNOfFilter.passes(item));
+        assertTrue("Item should have passed.",
+                atLeastNOfFilter.passes(item));
     }
 
     @Test
     public void testFilterFails() {
         AtLeastNOfFilter<T> atLeastNOfFilter = new AtLeastNOfFilter<>(1, filter);
         when(filter.passes(item)).thenReturn(false);
-        assertFalse(atLeastNOfFilter.passes(item));
+        assertFalse("Item should not have passed.",
+                atLeastNOfFilter.passes(item));
     }
 }
