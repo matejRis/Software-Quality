@@ -2,26 +2,28 @@
      - not running enough or proper tests which target security issues
      - not running all tests after adding new feature or fixing bugs (not all old tests have to pass)
      - not having security expert in the team (who would review and potentially spot security issues)
+	 - customers sharing informations that are secure and private
     solutions:
      - fix the bugs as quicky as possible and offer customer some kind of compensation for their troubles
      - hire security specialists
      - make sure that multiple persons review and check the code before releasing
+	 - urge customers to stop sharing security informations and to only report them to you
     solution no.1 problems:
      - fixing may be more time demanding which may lead to bugs staying present for longer time
      - damage could have already been done, to win customer trust again, you don't need just to fix bugs,
        but also to come up with something new, which will convince them to start using your product again
 2.  causes:
      - there might be some tests which are actually not very important, but they prolong release
-     - not grouping tests to some "component testing", which results to runnig all tests, even we might need
-       just running some of them
+     - not grouping tests to some "component testing", which results to runnig all tests, even tho we might need
+       just to run some of them
      - 
      solutions:
       - group tests to some components
       - get rid of some test which are not needed
-      - 
+      - do not run all tests on every integration, run only the group of tests that the files integrated are related to (erp tests)
      solution no.1 problems:
-      - sometimes it might be hard to distinguish which test to belong to which component
-      - some tests might overlap for multiple components
+      - sometimes it might be hard to distinguish which test belongs to which component
+      - some tests might overlap multiple components
 3.   causes:
       - not having separate branches for teams
       - not enough communication between teams
@@ -30,6 +32,7 @@
       - create separate branches for teams
       - plan and discuss about changes, other teams might spot the potential problem even before implementing
       - don't modify tests
+	  - use pre-commits, dont let teams integrate unless precommits pass
      solution no.1 problems
       - merging, sometimes many conflicts may occur when merging some of them not easy to fix
       - merging, fixing many conflicts may bring another problems to the application
@@ -60,8 +63,17 @@
         - even if similarity between environments is very high, there still might be cases where on one environmet
           everything works okey and on other not
 6.    causes:
-       -
-
+       - unexperienced QA - probably juniors without proper schoolings or tutorials on how to test
+	   - not testing all the proper tests and scenarios
+	   - no senior or manager to supervise the proper testing and to control the work of subordinates
+	   solutions:
+	   - check that people that are hired know what they are doing and that they are doing it right - double check their work - tests not failing anymore etc
+	   - hire a skilled senior QA that knows what he is doing - have him supervise other junior QAs
+	   - do not let people integrate into production without fully checking the system and have them write tests for all the scenarios with as much coverage as possible
+			to avoid integrating bugs into production
+	   solution no.2
+	   - can be hard to find someone with enough skill and experience who will be willing to lead the teams of unskilled QAs with poor integration delivery
+	   - can take long time to the individual to learn how the current system and testing works and the company will suffer meanwhile
 7.    causes:
        - no automated tests
        - no code review from more experienced developers
@@ -88,15 +100,15 @@
 9.    causes:
         - running test in main branch only
         - no separate branches for teams
-        -        
+        - everyone can everytime integrate into mainline
        solutions:
         - separate branches for teams
         - running tests and integrate in side branches to make sure everything works before merging to main branch
-        - 
+        - have some checks and rules on who and when can integrate into main branch
        solution no.2 problems:
         - even after sucessfully running test in side branches, integrating changes with other team's work in main
           branch can lead to test fails
-        -
+        - continuos integration can be tricky, have some time scheduling or have supervisor check your work before integration
 10.   causes:
        - low code coverage, not enough tests
        - not having backup service running on older version in case of bad functionality, loss of data
