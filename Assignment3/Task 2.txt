@@ -1,0 +1,145 @@
+1.  causes: 
+     - not running enough or proper tests which target security issues
+     - not running all tests after adding new feature or fixing bugs (not all old tests have to pass)
+     - not having security expert in the team (who would review and potentially spot security issues)
+    solutions:
+     - fix the bugs as quicky as possible and offer customer some kind of compensation for their troubles
+     - hire security specialists
+     - make sure that multiple persons review and check the code before releasing
+    solution no.1 problems:
+     - fixing may be more time demanding which may lead to bugs staying present for longer time
+     - damage could have already been done, to win customer trust again, you don't need just to fix bugs,
+       but also to come up with something new, which will convince them to start using your product again
+2.  causes:
+     - there might be some tests which are actually not very important, but they prolong release
+     - not grouping tests to some "component testing", which results to runnig all tests, even we might need
+       just running some of them
+     - 
+     solutions:
+      - group tests to some components
+      - get rid of some test which are not needed
+      - 
+     solution no.1 problems:
+      - sometimes it might be hard to distinguish which test to belong to which component
+      - some tests might overlap for multiple components
+3.   causes:
+      - not having separate branches for teams
+      - not enough communication between teams
+      - modifing tests that are critical
+     solutions:
+      - create separate branches for teams
+      - plan and discuss about changes, other teams might spot the potential problem even before implementing
+      - don't modify tests
+     solution no.1 problems
+      - merging, sometimes many conflicts may occur when merging some of them not easy to fix
+      - merging, fixing many conflicts may bring another problems to the application
+4.   causes:
+       - not enough experience with CD
+       - they releasing once per year or once per long period of time, they are not sure if they need CD
+       - even that in theory it is possible, developers can already see what issues they would have to solve
+         in order to succesfully pull of CD
+     solutions:
+       - hire someone who has lot of experience with CD
+       - choose CD system which will support most of your needs, so developers have to customize/solve
+         as little as possible
+       - for future projects keep in mind from the start that you want to use CD, so you adjust things
+         accordingly
+      solutions no.2 problems:
+       - adjustments in your software in order to pull of CD can lead to new issues and problems in your software
+       - developers have to spend their time on adjustments instead of doing something else
+5.    causes:
+       - they are fixing bug on environment different from production environment (different behaviour)
+       - they are doing tests on production environment which leads to introducing the bug to production again and again
+       - they are not running acceptance test before releasing
+       solutions:
+        - make sure that bug fixing runs of environment very similar to production environment
+        - do not do tests which can lead to some bugs or damage on production
+        - run all tests before release
+       solution no.1 problems:
+        - it might not be easy to create same environment as production environment
+        - even if similarity between environments is very high, there still might be cases where on one environmet
+          everything works okey and on other not
+6.    causes:
+       -
+
+7.    causes:
+       - no automated tests
+       - no code review from more experienced developers
+       - no QA
+      solutions:
+       - make automated tests, deploy them before every release
+       - assign some team members to new features, some to bug fixes
+       - hire people for QA
+      solution no.2 problems:
+       - splitted team might not be able to deliver or fix bugs on time
+       - new feature can introduce new bug or fixing the bug can introduce problems with new feature
+8.    causes:
+       - he is very pedantic
+       - he is more experienced and he knows the high importance of things he pinpoints
+       - he knows that refactoring bad code can lead to many issues which are hard to fix, that is why he insist
+         on very clean code
+      solutions:
+       - communicate, express opinion why he is pinpointing all those things, other developers why they thinks it is not important
+       - let other code reviewers express what they think (like referees)
+       - make compromise
+      solution no.2 problems:
+        - they may not be any more code reviewers in your company
+        - even when other reviewers decide who is right, they may be wrong
+9.    causes:
+        - running test in main branch only
+        - no separate branches for teams
+        -        
+       solutions:
+        - separate branches for teams
+        - running tests and integrate in side branches to make sure everything works before merging to main branch
+        - 
+       solution no.2 problems:
+        - even after sucessfully running test in side branches, integrating changes with other team's work in main
+          branch can lead to test fails
+        -
+10.   causes:
+       - low code coverage, not enough tests
+       - not having backup service running on older version in case of bad functionality, loss of data
+       - even low code coverage tests should cover basic functionality, so maybe they dont deploy them before every release
+      solutions:
+       - spend more time writing good, higher code coverage tests
+       - deploy all test before every release 
+       - always have some backup sevice so customer can work almost without any problems
+      solution no.3 problems
+       - older version backup service may lack some functionality which newer has
+       - even when switching to backup service, customer can lost important data
+11.   causes:
+       - technical support doesn't really come to touch with product
+       - technical support is trying to get rid of responsibility for solving problem so they put it straight to QA
+       - bad relationships between technical support and QA
+      solutions:
+       - go grab a beer with your technical support collegues
+       - educate technical support more about product
+       - hire responsible and problem solving people for technical support
+      solution no.2 problem:
+       - some products explanation may require some programming understading
+       - you need to spend time explaining
+12. causes:
+       - colleague doesn't know that you have no experience with code review
+       - he doesn't want to do code review so he assigned it to you
+       - he wants to hear your honest opinion, he wants to know how experienced you are
+      solutions:
+       - tell him that you have no experience with code review and that is probably not task for you
+       - ask another colleague for help
+       - google something about it, do your best code reviewing, but tell that it was your first code review ever and that
+         it is probably not good
+      solution no.3 problem:
+       - you will probably do it wrong and someone will have to do it again
+       - you may give to other person bad advices, if the person is unexperienced he might think that your code review is good
+         and he should adjust his code accordingly, but in reality your code review is probably not good because you are doing
+         it for the first time
+
+     
+   
+       
+        
+       
+
+      
+       
+     

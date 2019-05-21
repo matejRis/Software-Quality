@@ -1,1 +1,5 @@
 Starting audit...
+[ERROR] C:\Users\Matej\programko\Software-Quality\Assignment3\checkstyle\..\checkStyleTaskOne\src\main\java\com\assignment3\checkstyletaskone\BrainMethodClass.java:21:21: Nested if-else depth is 3 (max allowed is 2). [NestedIfDepth]
+[ERROR] C:\Users\Matej\programko\Software-Quality\Assignment3\checkstyle\..\checkStyleTaskOne\src\main\java\com\assignment3\checkstyletaskone\BrainMethodClass.java:28: Too many accessed variables in single method (max is 5) [VariablesInMethod]
+[ERROR] C:\Users\Matej\programko\Software-Quality\Assignment3\checkstyle\..\checkStyleTaskOne\src\main\java\com\assignment3\checkstyletaskone\BrainMethodClass.java:40:5: Method length is 67 lines (max allowed is 30). [MethodLength]
+Audit done.

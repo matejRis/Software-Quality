@@ -19,10 +19,91 @@ public class BrainMethodClass {
             if (3 == 3) {
                 if (4 == 4) {
                     if (5 == 5) {
-                        return;
                     }
                 }
             }
         }
     }
+    
+    public void LotOfVariables() {
+        savings = 45;
+        int x1 = 1;
+        int x2 = 2;
+        int x3 = 3;
+        //NestingTooDeep();
+        int x4 = 4;
+        int x5 = 5;
+        int x6 = 6;
+        int x7 = 7;       
+    }
+    
+    public void LongMethod() {
+        savings = 45;
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+    }
+    
+    
 }

@@ -8,83 +8,85 @@ package com.assignment3.checkstyletaskone;
 import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
-import com.puppycrawl.tools.checkstyle.checks.coding.NestedForDepthCheck;
-import com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck;
-import com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck;
-import com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck;
-import com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck;
-import com.sun.tools.javac.util.ArrayUtils;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  *
  * @author Matej
  */
-public class BrainMethodCheck extends AbstractCheck {
+public class VariablesInMethodCheck extends AbstractCheck {
 
-    private static final int DEFAULT_MAX_LINES_OF_CODE = 30;
+    /*private static final int DEFAULT_MAX_LINES_OF_CODE = 30;
     private static final int DEFAULT_MAX_CYCLOMATIC_COMPLEXITY = 10;
-    private static final int DEFAULT_MAX_NESTING_DEPTH = 1;
+    private static final int DEFAULT_MAX_NESTING_DEPTH = 1;*/
     private static final int DEFAULT_MAX_ACCESSED_VARIABLES = 6;
     
-    
-    private int maxLinesOfCode = DEFAULT_MAX_LINES_OF_CODE;
+    /*private int maxLinesOfCode = DEFAULT_MAX_LINES_OF_CODE;
     private int maxCyclomaticComplexity = DEFAULT_MAX_CYCLOMATIC_COMPLEXITY;
-    private int maxNestingDepth = DEFAULT_MAX_NESTING_DEPTH;
+    private int maxNestingDepth = DEFAULT_MAX_NESTING_DEPTH;*/
     private int maxAccessedVariables = DEFAULT_MAX_ACCESSED_VARIABLES;
     
-    private MethodLengthCheck methodLengthCheck;
+    /*private MethodLengthCheck methodLengthCheck;
     private CyclomaticComplexityCheck methodComplexityCheck;
     private NestedTryDepthCheck nestedTryDepthCheck;
     NestedForDepthCheck nestedForDepthCheck;
-    NestedIfDepthCheck nestedIfDepthCheck;
+    NestedIfDepthCheck nestedIfDepthCheck;*/
+    
+    private boolean insideMethod;
+    private int variableCount;
     
 
-    @Override
+    /*@Override
     public void init() {
          methodLengthCheck = new MethodLengthCheck();
          methodComplexityCheck = new CyclomaticComplexityCheck();
          nestedTryDepthCheck =  new NestedTryDepthCheck();
          nestedForDepthCheck = new NestedForDepthCheck();
          nestedIfDepthCheck = new NestedIfDepthCheck();
-    }
+    }*/
     
     @Override
     public int[] getDefaultTokens() {
-        /*Set tokens = new HashSet();
-        
-        tokens.addAll(Arrays.asList(methodLengthCheck.getDefaultTokens()));
-        tokens.addAll(Arrays.asList(methodComplexityCheck.getDefaultTokens()));
-        tokens.addAll(Arrays.asList(nestedTryDepthCheck.getDefaultTokens()));
-        tokens.addAll(Arrays.asList(nestedForDepthCheck.getDefaultTokens()));
-        tokens.addAll(Arrays.asList(nestedIfDepthCheck.getDefaultTokens()));
-        
-        return ArrayUtils.to;*/
-        
-        return nestedIfDepthCheck.getDefaultTokens();
+
+        return new int[] { TokenTypes.METHOD_DEF, TokenTypes.VARIABLE_DEF };
     }
 
     @Override
     public int[] getAcceptableTokens() {
-        return nestedIfDepthCheck.getAcceptableTokens();
+        return getDefaultTokens();
     }
 
     @Override
     public int[] getRequiredTokens() {
-        return nestedIfDepthCheck.getRequiredTokens();
+        return getDefaultTokens();
     }
     
     @Override
     public void visitToken(DetailAST ast) {
+        if (ast.getType() == TokenTypes.METHOD_DEF) {
+            insideMethod = true;
+        }
+        
+        if (insideMethod && ast.getType() == TokenTypes.VARIABLE_DEF) {
+            variableCount += 1;
+        }
+        
         //cyclomaticComplexityCheck(ast);
         //methodLengthCheck(ast);
-        nestedDepthCheck(ast);
+        //nestedDepthCheck(ast);
         //accessedVariablesCheck(ast);
-    } 
+    }
     
-    private void cyclomaticComplexityCheck(DetailAST ast)  {
+    @Override
+    public void leaveToken(DetailAST ast) {
+        if (ast.getType() == TokenTypes.METHOD_DEF) {
+            if (variableCount > maxAccessedVariables) {
+                log(ast.getLineNo(), "Too many accessed variables in single method (max is " + maxAccessedVariables + ")");
+            }
+            variableCount = 0;
+            insideMethod = false;
+        }
+    }
+    
+    /*private void cyclomaticComplexityCheck(DetailAST ast)  {
         methodComplexityCheck.setMax(maxCyclomaticComplexity);
         methodComplexityCheck.visitToken(ast);
     }
@@ -115,11 +117,7 @@ public class BrainMethodCheck extends AbstractCheck {
         nestedIfDepthCheck.setMax(maxNestingDepth);
         nestedIfDepthCheck.visitToken(ast);
     }
-    
-    private void accessedVariablesCheck(DetailAST ast) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        
      public void setMaxLinesOfCodes(int maxLinesOfCodes) {
         this.maxLinesOfCode = maxLinesOfCodes;
     }
@@ -130,7 +128,7 @@ public class BrainMethodCheck extends AbstractCheck {
 
     public void setMaxNestingDepth(int maxNestingDepth) {
         this.maxNestingDepth = maxNestingDepth;
-    }
+    }*/
 
     public void setMaxAccesedVariables(int maxAccesedVariables) {
         this.maxAccessedVariables = maxAccesedVariables;
